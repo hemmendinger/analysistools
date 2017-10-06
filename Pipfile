@@ -9,8 +9,12 @@ numpy = "*"
 pandas = "*"
 pyarrow = "*"
 ipython = "*"
-# Completion support in iPython
 pyreadline = "*"
+scipy = "*"
+jupyter = "*"
+seaborn = "*"
+matplotlib = "*"
+requests = "*"
 
 
 [dev-packages]
