@@ -3,13 +3,18 @@
 df = pandas.DataFrame(list_of_dicts)
 
 ## Save Pandas DataFrame to disk using Parquet
-import pyarrow.parquet as pq
+from pyarrow import parquet
+import pyarrow
 
 table = pyarrow.Table.from_pandas(df)
-pq.write_table(table, 'filename.parquet')
+parquet.write_table(table, 'filename.parquet')
 
-## Read Parquet from disk
-table = pq.read_table('filename.parquet')
+## Read Parquet from disk and convert to Pandas DataFrame
+import pyarrow.parquet as pq
+
+arrow_table = pq.read_table('filename.parquet')
+df = arrow_table.to_pandas()
+
 ### Use multithreaded reads when data columns are expensive to decode. 
 Use the parameter: nthreads=NUM
 ### Read only a subset of columns for speed. Pass them as an argument:
@@ -45,6 +50,9 @@ Format can be omitted and Pandas will attempt to infer the format.
 
 ## Sampling using dataset as source
 sample = dataframe.iloc[numpy.random.choice(dataframe.index.values, SAMPLE_NUMBER)]
+## Split a date range string column into two columns
+Assuming data is formatting as "10/7/2017 - 11/1/2017":
+df['start date'], df['end date'] = df['date range'].str.split(' - ')str
 
 # Visualizing
 ## Display plots in Jupyter
