@@ -41,6 +41,9 @@ iPython will read $PYTHONSTARTUP and run the script
 
 
 
+## Apache Kafka: Using librdkafka when built from source
+Follow the usual procedures (./configure; make; make install) then run ldconfig
+
 # Creating new data from data
 ## Add row to a Pandas DataFrame of the change in values of another row
 If you want the differences starting with first and second:
