@@ -9,6 +9,9 @@ import pyarrow
 table = pyarrow.Table.from_pandas(df)
 parquet.write_table(table, 'filename.parquet')
 
+## Read CSV from disk
+dataframe = pandas.read_csv('data.csv')
+
 ## Read Parquet from disk and convert to Pandas DataFrame
 import pyarrow.parquet as pq
 
@@ -19,6 +22,13 @@ df = arrow_table.to_pandas()
 Use the parameter: nthreads=NUM
 ### Read only a subset of columns for speed. Pass them as an argument:
 columns=['one', 'three']
+
+# Design
+## Operating on a slice of dataframe (Expand on this and write about resetting indexes)
+Do not slice/filter a dataframe and then try to assign new data to it using regular methods.
+For example, you filter out rows based on a date column for dates before a certain date.
+
+
 # Development Tools
 ## Automatically load environment variables
 pipenv will automatically load variables defined in a .env file

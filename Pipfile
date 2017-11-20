@@ -17,6 +17,7 @@ jupyter = "*"
 seaborn = "*"
 matplotlib = "*"
 requests = "*"
+confluent-kafka = "*"
 
 
 [dev-packages]
