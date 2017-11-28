@@ -18,6 +18,8 @@ seaborn = "*"
 matplotlib = "*"
 requests = "*"
 confluent-kafka = "*"
+"lz4" = "*"
+"avro-python3" = "*"
 
 
 [dev-packages]
