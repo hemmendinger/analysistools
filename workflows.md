@@ -101,6 +101,16 @@ Must ensure that a client can resolve the host by adding to /etc/hosts on the cl
 ### Using librdkafka when built from source
 Follow the usual procedures (./configure; make; make install) then run ldconfig
 
+## iPython shell
+### Clipboard copy & paste
+Pasting has a built-in magic command: %paste
+
+Copying to the clipboard using the "os" module and "xsel" command:
+    os.system("echo {} | xsel --clipboard".format(var))
+
+Assign to a function or lambda for convenience:
+    clip = lambda x: os.system("echo {} | xsel --clipboard".format(x))
+
 ## pipenv
 Current workaround for installing local packages: "pipenv run pip -e ." from within package directory.
 
