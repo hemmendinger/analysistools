@@ -20,6 +20,7 @@ requests = "*"
 confluent-kafka = "*"
 "lz4" = "*"
 "avro-python3" = "*"
+xlrd = "*"
 
 
 [dev-packages]
