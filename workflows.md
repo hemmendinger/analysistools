@@ -3,6 +3,10 @@
 df = pandas.DataFrame(list_of_dicts)
 
 ## Save Pandas DataFrame to disk using Parquet
+New in v21:
+DataFrame.to_parquet(fname, engine='auto', compression='snappy', **kwargs)
+
+### before Pandas version 21
 from pyarrow import parquet
 import pyarrow
 
@@ -109,7 +113,11 @@ Copying to the clipboard using the "os" module and "xsel" command:
     os.system("echo {} | xsel --clipboard".format(var))
 
 Assign to a function or lambda for convenience:
-    clip = lambda x: os.system("echo {} | xsel --clipboard".format(x))
+    clip = lambda x: os.system("echo '{}' | xsel --clipboard".format(x))
+### Output history to file by history line number
+Use: %history -n NUMBER -f FILENAME
+
+Don't put filenames in quotes.
 
 ## pipenv
 Current workaround for installing local packages: "pipenv run pip -e ." from within package directory.
