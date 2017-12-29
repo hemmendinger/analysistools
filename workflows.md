@@ -177,3 +177,12 @@ plt.show()
 
 
 
+
+# To Try
+## Pyflame profiling tool
+Profiles, via sampling, from a separate process using ptrace.
+First saw it mentioned here: https://jvns.ca/blog/2017/12/17/how-do-ruby---python-profilers-work-/
+
+Source: https://github.com/uber/pyflame
+
+Does not appear to be on PyPI.
