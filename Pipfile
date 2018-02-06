@@ -21,6 +21,7 @@ confluent-kafka = "*"
 "lz4" = "*"
 "avro-python3" = "*"
 xlrd = "*"
+"psycopg2" = "*"
 
 
 [dev-packages]
