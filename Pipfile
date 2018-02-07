@@ -22,6 +22,7 @@ confluent-kafka = "*"
 "avro-python3" = "*"
 xlrd = "*"
 "psycopg2" = "*"
+sqlalchemy = "*"
 
 
 [dev-packages]
