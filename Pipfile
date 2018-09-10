@@ -12,6 +12,7 @@ pandas = "*"
 pyarrow = "*"
 ipython = "*"
 pyreadline = "*"
+jedi = "*"
 scipy = "*"
 jupyter = "*"
 seaborn = "*"
@@ -23,6 +24,8 @@ confluent-kafka = "*"
 xlrd = "*"
 "psycopg2" = "*"
 sqlalchemy = "*"
+"bs4" = "*"
+lxml = "*"
 
 
 [dev-packages]
