@@ -37,6 +37,13 @@ For example, you filter out rows based on a date column for dates before a certa
 ## Automatically load environment variables
 pipenv will automatically load variables defined in a .env file
 
+## Ansible
+If getting SSL failures, try seeing if there are errors when running:
+openssl s_client -CApath /etc/ssl/certs/ -showcerts -connect www.postgresql.org:443
+(Or against another site)
+
+An error is also possible if system time is out of sync.
+
 ## Import a set of packages into iPython shell on startup
 Define a Python file that contains all imports, then:
 export PYTHONSTARTUP=./startup.py
@@ -121,6 +128,12 @@ Don't put filenames in quotes.
 
 ## pipenv
 Current workaround for installing local packages: "pipenv run pip -e ." from within package directory.
+
+Installing from git repositories:
+- Pass URL, with all prefixes and suffixes, in quotes to "pipenv install"
+- Prefix URL with "git+"
+- Suffix URL with "#egg=PACKAGE_NAME"
+- Might need to install package in "editable" mode (use -e) to avoid some errors and issues
 
 ## Python requests library
 "All exceptions that Requests explicitly raises inherit from requests.exceptions.RequestException.
