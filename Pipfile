@@ -1,12 +1,9 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
 numpy = "*"
 pandas = "*"
 pyarrow = "*"
@@ -26,7 +23,7 @@ xlrd = "*"
 sqlalchemy = "*"
 "bs4" = "*"
 lxml = "*"
-
+pipfile = "*"
+python-twitter = "*"
 
 [dev-packages]
-
